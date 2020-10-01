@@ -1,0 +1,16 @@
+<div class="col-md-4 offset-4  card m-2">
+    <div class="cardbody">
+        <form action="" [formGroup]="form">
+            <div class="form-group">
+                <label for="username">username</label>
+                <input
+                formControlName="username" 
+                type="text" name="username" id="username" for="username"
+                 placeholder="enter username">
+                 <div class="alert alert-danger m-2" *ngIf="username.invalid && username.touched">
+                     <p *ngIf="username.errors.required">username required</p>
+                 </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+<div class="container">
+    <input type="search" class="form-control mb-4 mt-2" placeholder="search here" 
+    [(ngModel)]="searchText">
+    <h1>{{searchText}}</h1>
+</div>
+    <div class="container">
+    <table class=" table table-bordered hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>COMPANY</th>
+                <th>SALARY</th>
+                <th>DESIGNATION</th>
+                <th>DOJ</th>
+                <th>GENDER</th>
+                <th>LOC</th>
+                <th>EDUCATION</th>
+                <th>percentage</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employeeData |filter:searchText;index as i">
+                <td>{{i+1}}</td>
+                <td>{{emp.emp_name}}</td>
+                <td>{{emp.emp_age}}</td>
+                <td>{{emp.emp_company |lowercase}}</td>
+                <td>{{emp.emp_salary | currency:'INR'}}</td>
+                <td>{{emp.emp_designation |titlecase}}</td>
+                <td>{{emp.emp_doj |date:'fullDate'}}</td>
+                <td>{{emp.emp_gender |gender:emp.emp_gender}}</td>
+                <td>{{emp.emp_loc}}</td>
+                <td>{{emp.emp_edu}}</td>
+                <td>{{emp.emp_edu_percentage}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

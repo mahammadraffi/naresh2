@@ -1,0 +1,55 @@
+<h1 align="center">Emp-details</h1>
+<table class="table table-bordered mt-4">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Doj</th>
+        <th>Location</th>
+        <th>Education</th>
+        <th>Stream</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.company}}</td>
+        <td>{{user.salary}}</td>
+        <td>{{user.designation}}</td>
+        <td>{{user.doj}}</td>
+        <td>{{user.location}}</td>
+        <td>{{user.education}}</td>
+        <td>{{user.stream}}</td>
+    </tr>
+</table>
+
+
+<!-- <img [src]="userprofile"/>  -->
+   <!-- class binding -->
+<!-- <button [class.raffi]='isActive'>submit</button> -->
+    <!-- attribute binding -->
+<!-- <table>
+    <tr>
+        <td [attr.colspan]="colspan">test</td>
+    </tr>
+</table> -->
+<!-- style binding -->
+<!-- <button [style.background]="color ? 'red':'green'">style binding</button> -->
+<!-- event binding -->
+
+
+<!-- <button (click)="clickEvent($event)" class="btn btn-success">event</button>
+<input type="text" class="form-control" (keyup)='keyupEvent($event)'/> 
+<input type="text" class="form-control" (keyup.enter)='angularwaykeyupEvent($event)' placeholder="enter text">
+<input type="text" name="" id="" class="form-control" placeholder="enter mail" #email (keyup.enter)="enterEmail(email.value)"/>  -->
+
+<!-- two way data binding -->
+
+<!-- <input type="text"[(ngModel)]="username" name="" id="" class="form-control" placeholder="enter username" >
+<h1>{{username}}</h1> -->
+
+
+
+
+
